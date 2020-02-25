@@ -13,11 +13,21 @@ void Highway::changeSpeed(int newSpeed)
 
 void Highway::addVehicleInternal(Vehicle* v)
 {
-    assert(false);
+    //assert(false);
 
     /*
     depending on the derived type, call the member function that doesn't evade the cops. 
     */
+    if ((Car* sedan) = dynamic_cast<Car*>(v))
+    {
+        sedan.closeWindows();
+    }
+
+    if ((Motorcycle* bike) = dynamic_cast<Motorcycle*>(v))
+    {
+        bike.laneSplitAndrace();
+    }
+    
 }
 
 void Highway::removeVehicleInternal(Vehicle* v)

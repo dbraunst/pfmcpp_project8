@@ -44,6 +44,13 @@ your task:
 #include <vector>
 #include <algorithm>
 #include <cassert>
+#include "Highway.h"
+#include "HighwayPatrol.h"
+#include "Vehicle.h"
+#include "Car.h"
+#include "Motorcycle.h"
+#include "SemiTruck.h"
+#include "Vehicle.h"
 
 int main()
 {
@@ -58,11 +65,12 @@ int main()
 
     };
 
+    /*
     std::vector<SemiTruck> trucks
     {
 
     };
-
+    */
     assert(false);
     //add the cars, motorcycles and trucks to the highway using range-based for() loops: for( element : vec ) { ... }
     //be careful to not accidentally make element copies when iterating.

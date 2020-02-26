@@ -4,7 +4,7 @@
 struct Car : public Vehicle
 {
     Car(const std::string& s);
-    ~Car() override;
+    //~Car();
     void closeWindows();
 
     void tryToEvade() override;

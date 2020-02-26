@@ -1,9 +1,9 @@
 #include "HighwayPatrol.h"
 #include <iostream>
 
-HighwayPatrol::HighwayPatrol() : Vehicle("HighwayPatrol")
+HighwayPatrol::HighwayPatrol() : Vehicle("Patrol")
 {
-
+    
 }
 
 void HighwayPatrol::scanHighway(Highway* h)

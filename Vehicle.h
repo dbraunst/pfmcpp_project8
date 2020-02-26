@@ -10,6 +10,7 @@ struct Vehicle
     //inheritence specifiers !apply to class ?
     //ergo should include highway? instance?
     Vehicle(const std::string& n) : name(n) { }
+    virtual ~Vehicle() {}
     
     virtual void setSpeed(int s)
     {

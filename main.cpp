@@ -44,7 +44,7 @@ your task:
 #include <vector>
 #include <algorithm>
 #include <cassert>
-
+ 
 int main()
 {
     Highway highway;

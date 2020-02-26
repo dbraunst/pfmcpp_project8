@@ -7,7 +7,7 @@
 struct Motorcycle : public Vehicle
 {
     Motorcycle(const std::string& n);
-    //~Motorcycle() {} 
+    ~Motorcycle() override {}
     
     void lanesplitAndRace( int topSpeed = std::numeric_limits<int>::max() );
     
@@ -15,5 +15,4 @@ struct Motorcycle : public Vehicle
 
     void setSpeed(int s) override;
 
-    std::string vehicleType = "Motorcycle";
 };

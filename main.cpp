@@ -44,27 +44,47 @@ your task:
 #include <vector>
 #include <algorithm>
 #include <cassert>
- 
+#include "Highway.h"
+#include "HighwayPatrol.h"
+#include "Vehicle.h"
+#include "Car.h"
+#include "Motorcycle.h"
+#include "SemiTruck.h"
+#include "Vehicle.h"
+
 int main()
 {
     Highway highway;
     
     std::vector<Car> cars 
     { 
-        Car("janice"),
+        Car("janice"), Car("ernesto"), Car("caillou")
     };
     std::vector<Motorcycle> motorcycles
     { 
-
+        Motorcycle("chad")
     };
-
+    
     std::vector<SemiTruck> trucks
     {
-
+        SemiTruck("cleber"), SemiTruck("darryl"), SemiTruck("louann")
     };
-
-    assert(false);
+    //assert(false);
     //add the cars, motorcycles and trucks to the highway using range-based for() loops: for( element : vec ) { ... }
+    for (auto i : cars)
+    {
+        highway.addVehicle(&i);
+    }
+
+    for (auto i : motorcycles)
+    {
+        highway.addVehicle(&i);
+    }
+
+    for (auto i : trucks)
+    {
+        highway.addVehicle(&i);
+    }
     //be careful to not accidentally make element copies when iterating.
     
     HighwayPatrol cop;

@@ -3,8 +3,12 @@
 #include <string>
 #include <iostream>
 
+struct HighwayPatrol;
+
 struct Vehicle
 {
+    //inheritence specifiers !apply to class ?
+    //ergo should include highway? instance?
     Vehicle(const std::string& n) : name(n) { }
     
     virtual void setSpeed(int s)
@@ -21,4 +25,7 @@ struct Vehicle
 protected:
     int speed = 0;
     std::string name;
+    std::string vehicleType = "test"; 
+
+    friend HighwayPatrol;
 };

@@ -6,7 +6,7 @@
 struct HighwayPatrol : protected Vehicle
 {
     HighwayPatrol();
-    ~HighwayPatrol();
+    ~HighwayPatrol() override;
     
     void scanHighway(Highway* h);
 

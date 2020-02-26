@@ -62,7 +62,7 @@ int main()
     };
     std::vector<Motorcycle> motorcycles
     { 
-        Motorcycle("chad")
+        Motorcycle("chad"), Motorcycle("betty"), Motorcycle("brad")
     };
     
     std::vector<SemiTruck> trucks
@@ -71,17 +71,17 @@ int main()
     };
     //assert(false);
     //add the cars, motorcycles and trucks to the highway using range-based for() loops: for( element : vec ) { ... }
-    for (auto i : cars)
+    for (auto& i : cars) //that's why we put the & next to the type, not the variable name, when declaring a reference
+    {
+        highway.addVehicle(&i); // &i looks like you're taking the address of, which you are here
+    }
+
+    for (auto& i : motorcycles)
     {
         highway.addVehicle(&i);
     }
 
-    for (auto i : motorcycles)
-    {
-        highway.addVehicle(&i);
-    }
-
-    for (auto i : trucks)
+    for (auto& i : trucks)
     {
         highway.addVehicle(&i);
     }

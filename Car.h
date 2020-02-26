@@ -8,4 +8,6 @@ struct Car : public Vehicle
     void closeWindows();
 
     void tryToEvade() override;
+
+    std::string vehicleType = "Motorcycle";
 };

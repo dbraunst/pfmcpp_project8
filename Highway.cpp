@@ -26,12 +26,12 @@ void Highway::addVehicleInternal(Vehicle* v)
 
     if (Motorcycle* bike = dynamic_cast<Motorcycle*>(v))
     {
-        bike->lanesplitAndRace(90);
+        bike->lanesplitAndRace(110);
     }
-    
+
     if (SemiTruck* lorry = dynamic_cast<SemiTruck*>(v))
     {
-        lorry->PullOver();
+        lorry->EnterHighway();
     }
 
 }
@@ -55,6 +55,10 @@ void Highway::removeVehicleInternal(Vehicle* v)
         bike->tryToEvade();
     }
 
+    if (SemiTruck* lorry = dynamic_cast<SemiTruck*>(v))
+    {
+        lorry->PullOver();
+    }
 }
 
 void Highway::addVehicle(Vehicle* v)

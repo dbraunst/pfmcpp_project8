@@ -14,4 +14,6 @@ struct Motorcycle : public Vehicle
     void tryToEvade() override;
 
     void setSpeed(int s) override;
+
+    std::string vehicleType = "Motorcycle";
 };

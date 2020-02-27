@@ -9,7 +9,7 @@ struct SemiTruck : public Vehicle
     SemiTruck(const std::string& n);
     ~SemiTruck() override;
 
-    void EnterHighway();
+    void EnterHighway(); FIXME member variables and functions don't start with a capital letter
 
-    void PullOver();
+    void PullOver(); FIXME member variables and functions don't start with a capital letter
 };
